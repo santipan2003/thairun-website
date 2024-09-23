@@ -46,11 +46,7 @@ const UpdatePageCard = () => {
         width="100%"
       >
         <Box textAlign="center" mb="4rem">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, delay: 0.2 }}
-          >
+         
             <Heading fontSize={["4xl", "5xl"]}>
               UPDATES
               <span style={{ color: useColorModeValue("#FF9900", "#FF9900") }}>
@@ -58,7 +54,6 @@ const UpdatePageCard = () => {
                 GALLERY
               </span>
             </Heading>
-          </motion.div>
         </Box>
 
         {/* Swiper Image Carousel */}
@@ -76,7 +71,7 @@ const UpdatePageCard = () => {
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                transition={{ duration: 0.2, delay: 0.1 }}
               >
                 <Link href={update.path} isExternal>
                   <Image

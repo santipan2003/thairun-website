@@ -21,18 +21,15 @@ const Layout = ({ children, title = "THAIRUN | Website" }: Props) => (
       <Navbar />
     </Box>
     <Box
-      bgColor={useColorModeValue("white", "black")}
+      bgColor={useColorModeValue("gray.100", "gray.800")} // Set the background color to gray
       flex="1"
-      mt={{ base: "50px", md: "60px" }} 
-      pt={{ base: 4, md: 6 }} 
     >
       <Box
         as="main"
-        maxW="1500px"
+        maxW="100%"
         mx="auto"
-        px={{ base: 4, md: 6, lg: 8 }}
-        py={{ base: 4, md: 6 }}
         width="100%"
+        bgColor={useColorModeValue("white", "black")} // Set the background color of the main content
       >
         {children}
       </Box>

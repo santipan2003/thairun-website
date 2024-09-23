@@ -49,32 +49,23 @@ const ProductPageCard = () => {
       width="100%"
     >
       <Box textAlign="center" mb="4rem">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, delay: 0.2 }}
-        >
+       
           <Heading fontSize={["4xl", "5xl"]}>
             PRODUCTS
             <span style={{ color: highlightColor }}> LIST</span>
           </Heading>
-        </motion.div>
       </Box>
 
       <SimpleGrid columns={[1, 2, 3]} spacing="40px" width="100%">
         {products.map((product) => (
           <motion.div
             key={product.id}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             whileHover={{ scale: 1.075 }}
           >
             <Box
               p="4"
-              borderWidth="1px"
-              borderRadius="lg"
-              boxShadow="lg"
+             
               bg={bgColor}
               display="flex"
               flexDirection="column"

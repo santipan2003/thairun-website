@@ -1,59 +1,51 @@
-import { Box, Heading, Text, Flex, useColorModeValue } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 
 const LandingPageCard = () => {
-  const handWaveAnimation = {
-    rotate: [0, -20, 10, -10, 20, 0],
-    transition: {
-      duration: 1.5,
-      ease: "easeInOut",
-      repeat: Infinity,
-      repeatDelay: 1.5,
-    },
-  };
-
   return (
-    <Box position="relative" width="100%" height="100vh" overflow="hidden">
+    <Box
+      position="relative"
+      width="100%"
+      height="100vh"
+      overflow="hidden"
+      backgroundImage="url('/UXUI Thai.run.svg')" // Add background image
+      backgroundSize="cover" // Ensure the image covers the full area
+      backgroundPosition="center" // Center the background image
+      backgroundRepeat="no-repeat" // Prevent background image from repeating
+    >
+      {/* Dark Overlay */}
+      <Box
+        position="absolute"
+        top="0"
+        left="0"
+        width="100%"
+        height="100%"
+        backgroundColor="rgba(0, 0, 0, 0.4)" // Semi-transparent black overlay to darken the background
+        zIndex="0" // Ensure the overlay is behind the content
+      />
+
+      {/* Centered Content */}
       <Flex
         direction="column"
         alignItems="center"
-        justifyContent="center" // Centers both vertically and horizontally
-        zIndex="1"
+        justifyContent="center"
+        zIndex="1" // Ensure content is above the overlay
         position="relative"
         height="100%" // Ensure Flex takes full height of the viewport
       >
-        <Box textAlign="center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, delay: 0.2 }}
-          >
-            <Heading fontSize={["4xl"]}>
-              www.thairun.run
-              <motion.span
-                animate={handWaveAnimation}
-                style={{ display: "inline-block" }}
-              >
-                👋
-              </motion.span>
-            </Heading>
-          </motion.div>
+        <Box mr="25rem">
+          {/* Hero Heading */}
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, delay: 0.4 }}
-          >
-            <Text
-              mt="1rem"
-              fontSize="lg"
-              mb="13rem"
-              color={useColorModeValue("gray.500", "gray.300")}
-            >
-              เทคโนโลยีคนไทย เพื่องานวิ่งไทย
-              <br /> สนับสนุนโดย สกสว.
+          <Heading fontSize={["5xl", "6xl"]} color="white" fontWeight="bold">
+            www.thai.run <br />
+            <Text fontSize={["2xl", "3xl"]}>
+              เทคโนโลยีคนไทย เพื่องานวิ่งไทย <br />
+              สนับสนุนโดย
+              <Text as="span" color="#FF9900">
+                {" "}
+                สกสว.
+              </Text>{" "}
             </Text>
-          </motion.div>
+          </Heading>
         </Box>
       </Flex>
     </Box>

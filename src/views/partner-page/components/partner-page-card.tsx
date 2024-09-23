@@ -1,10 +1,4 @@
-import {
-  Box,
-  Heading,
-  Flex,
-  Image,
-  SimpleGrid,
-} from "@chakra-ui/react";
+import { Box, Heading, Flex, Image, SimpleGrid } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -45,25 +39,13 @@ const PartnerPageCard = () => {
     >
       {/* Clients Section */}
       <Box textAlign="center" mb="4rem">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, delay: 0.2 }}
-        >
-          <Heading fontSize={["4xl", "5xl"]} mb="2rem">
-            OUR <span style={{ color: "#FF9900" }}>CLIENTS</span>
-          </Heading>
-        </motion.div>
+        <Heading fontSize={["4xl", "5xl"]} mb="2rem">
+          OUR <span style={{ color: "#FF9900" }}>CLIENTS</span>
+        </Heading>
 
         <SimpleGrid columns={[2, 3, 5]} spacing="40px" width="100%">
           {clients.map((client) => (
-            <motion.div
-              key={client.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              whileHover={{ scale: 1.075 }}
-            >
+            <motion.div key={client.id} whileHover={{ scale: 1.075 }}>
               <Box
                 p="2"
                 display="flex"
@@ -87,22 +69,14 @@ const PartnerPageCard = () => {
 
       {/* Partners Section */}
       <Box textAlign="center" mb="4rem">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, delay: 0.2 }}
-        >
-          <Heading fontSize={["4xl", "5xl"]} mb="2rem">
-            OUR <span style={{ color: "#FF9900" }}>PARTNERS</span>
-          </Heading>
-        </motion.div>
+        <Heading fontSize={["4xl", "5xl"]} mb="2rem">
+          OUR <span style={{ color: "#FF9900" }}>PARTNERS</span>
+        </Heading>
 
         <SimpleGrid columns={[2, 3, 5]} spacing="40px" width="100%">
           {otherPartners.map((partner) => (
             <motion.div
               key={partner.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               whileHover={{ scale: 1.075 }}
             >

@@ -30,7 +30,7 @@ export default function Footer() {
           />
         </Flex>
         <Text pt={10} fontSize={"sm"} textAlign={"center"}>
-          Copyright © 2020 Thaidotrun Co., Ltd.
+          Copyright © 2024 Thaidotrun Co., Ltd. | by Santipan Sunee. 
         </Text>
       </Box>
     </Box>
