@@ -12,7 +12,7 @@ import {
 import { motion } from "framer-motion";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Product } from "@/pages/interfaces";
+import { Product } from "@/interfaces";
 import { FaRunning } from "react-icons/fa";
 
 const ProductPageCard = () => {

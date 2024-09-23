@@ -1,4 +1,4 @@
-import { Partner, Product, Update } from "../interfaces";
+import { Partner, Product, Update } from "@/interfaces";;
 
 export const productData: Product[] = [
   {

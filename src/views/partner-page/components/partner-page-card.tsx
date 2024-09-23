@@ -8,7 +8,7 @@ import {
 import { motion } from "framer-motion";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Partner } from "@/pages/interfaces";
+import { Partner } from "@/interfaces";
 
 const PartnerPageCard = () => {
   const [partners, setPartners] = useState<Partner[]>([]); // Define state with Partner type

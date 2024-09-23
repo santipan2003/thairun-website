@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { partnerData } from "@/pages/utils/thairun-data";
+import { partnerData } from "@/utils/thairun-data";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {

@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { updateData } from "@/pages/utils/thairun-data";
-
+import { updateData } from "@/utils/thairun-data";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     res.status(200).json(updateData);

@@ -9,7 +9,7 @@ import {
 import { motion } from "framer-motion";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Update } from "@/pages/interfaces";
+import { Update } from "@/interfaces";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/swiper-bundle.css";
