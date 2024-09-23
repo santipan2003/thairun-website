@@ -84,42 +84,42 @@ export const updateData: Update[] = [
   {
     id: 1,
     image: "IMG_9844.jpg",
-    path: "thai.run",
+    path: "https://www.thai.run/",
   },
   {
     id: 2,
     image: "IMG_9839.jpg",
-    path: "thai.run",
+    path: "https://www.thai.run/",
   },
   {
     id: 3,
     image: "IMG_9843.jpg",
-    path: "thai.run",
+    path: "https://www.thai.run/",
   },
   {
     id: 4,
     image: "IMG_9841.jpg",
-    path: "thai.run",
+    path: "https://www.thai.run/",
   },
   {
     id: 5,
     image: "IMG_9845.jpg",
-    path: "thai.run",
+    path: "https://www.thai.run/",
   },
   {
     id: 6,
     image: "IMG_9840.jpg",
-    path: "thai.run",
+    path: "https://www.thai.run/",
   },
   {
     id: 7,
     image: "IMG_9838.jpg",
-    path: "thai.run",
+    path: "https://www.thai.run/",
   },
   {
     id: 8,
     image: "IMG_9842.jpg",
-    path: "thai.run",
+    path: "https://www.thai.run/",
   },
 ];
 

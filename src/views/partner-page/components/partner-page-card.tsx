@@ -1,12 +1,9 @@
 import {
   Box,
   Heading,
-  Text,
   Flex,
-  useColorModeValue,
   Image,
   SimpleGrid,
-  VStack,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import axios from "axios";

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
-import { Box, Flex, Stack } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useColorModeValue } from "@chakra-ui/react";
@@ -10,7 +10,7 @@ type Props = {
   title?: string;
 };
 
-const Layout = ({ children, title = "Santipan Sunee | Portfolio" }: Props) => (
+const Layout = ({ children, title = "THAIRUN | Website" }: Props) => (
   <Flex direction="column" minH="100vh" overflowX="hidden">
     <Head>
       <title>{title}</title>

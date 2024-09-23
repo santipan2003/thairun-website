@@ -6,9 +6,10 @@ import {
   IconButton,
   useDisclosure,
   Stack,
+  Image,
+  useColorModeValue,
+  useColorMode,
 } from "@chakra-ui/react";
-import { Image, useColorModeValue } from "@chakra-ui/react";
-import { useColorMode } from "@chakra-ui/react";
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -19,13 +20,16 @@ const Navbar = () => {
   // Define the height of your Navbar here
   const navbarHeight = 60; // Adjust based on your Navbar height
   const logoSrc = useColorModeValue("/IMG_9836.jpg", "/logothairun-W.png");
+  const hoverColor = useColorModeValue("gray.600", "gray.300");
+  const bgColor = useColorModeValue("white", "black");
+  const mobileHoverBg = useColorModeValue("gray.200", "gray.600");
 
   return (
     <Box
       as="nav"
       py={[2, 1]}
       boxShadow="md"
-      bgColor={useColorModeValue("white", "black")}
+      bgColor={bgColor}
       position="fixed"
       top="0"
       left="0"
@@ -42,7 +46,7 @@ const Navbar = () => {
         <Image
           src={logoSrc}
           alt="Logo Thairun"
-          boxSize={["50px", "75px", "50px"]} 
+          boxSize={["50px", "75px", "50px"]}
           objectFit="cover"
         />
         <Flex
@@ -64,7 +68,7 @@ const Navbar = () => {
                 _hover={{
                   transform: "scale(1.2)",
                   textDecoration: "none",
-                  color: useColorModeValue("gray.600", "gray.300"),
+                  color: hoverColor,
                 }}
               >
                 Home
@@ -82,7 +86,7 @@ const Navbar = () => {
                 _hover={{
                   transform: "scale(1.2)",
                   textDecoration: "none",
-                  color: useColorModeValue("gray.600", "gray.300"),
+                  color: hoverColor,
                 }}
               >
                 About
@@ -100,7 +104,7 @@ const Navbar = () => {
                 _hover={{
                   transform: "scale(1.2)",
                   textDecoration: "none",
-                  color: useColorModeValue("gray.600", "gray.300"),
+                  color: hoverColor,
                 }}
               >
                 Product
@@ -118,7 +122,7 @@ const Navbar = () => {
                 _hover={{
                   transform: "scale(1.2)",
                   textDecoration: "none",
-                  color: useColorModeValue("gray.600", "gray.300"),
+                  color: hoverColor,
                 }}
               >
                 Update
@@ -131,12 +135,12 @@ const Navbar = () => {
               offset={-navbarHeight}
             >
               <Text
-                cursor="contact"
+                cursor="pointer"
                 transition="transform 0.2s"
                 _hover={{
                   transform: "scale(1.2)",
                   textDecoration: "none",
-                  color: useColorModeValue("gray.600", "gray.300"),
+                  color: hoverColor,
                 }}
               >
                 Contact
@@ -179,7 +183,7 @@ const Navbar = () => {
                 _hover={{
                   transform: "scale(1.2)",
                   textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.600"),
+                  bg: mobileHoverBg,
                   rounded: "md",
                   padding: 2,
                 }}
@@ -200,7 +204,7 @@ const Navbar = () => {
                 _hover={{
                   transform: "scale(1.2)",
                   textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.600"),
+                  bg: mobileHoverBg,
                   rounded: "md",
                   padding: 2,
                 }}
@@ -221,7 +225,7 @@ const Navbar = () => {
                 _hover={{
                   transform: "scale(1.2)",
                   textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.600"),
+                  bg: mobileHoverBg,
                   rounded: "md",
                   padding: 2,
                 }}
@@ -242,7 +246,7 @@ const Navbar = () => {
                 _hover={{
                   transform: "scale(1.2)",
                   textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.600"),
+                  bg: mobileHoverBg,
                   rounded: "md",
                   padding: 2,
                 }}
@@ -263,7 +267,7 @@ const Navbar = () => {
                 _hover={{
                   transform: "scale(1.2)",
                   textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.600"),
+                  bg: mobileHoverBg,
                   rounded: "md",
                   padding: 2,
                 }}

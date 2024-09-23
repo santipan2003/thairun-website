@@ -4,7 +4,6 @@ import {
   Flex,
   useColorModeValue,
   Image,
-  Button,
   Link,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
@@ -17,7 +16,6 @@ import "swiper/swiper-bundle.css";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import { FaRunning } from "react-icons/fa"; // Example icon used in the button
 
 const UpdatePageCard = () => {
   const [updateData, setUpdateData] = useState<Update[]>([]); // Define state with Update type

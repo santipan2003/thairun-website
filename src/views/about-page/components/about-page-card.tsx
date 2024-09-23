@@ -73,7 +73,7 @@ const AboutPageCard = () => {
           transition={{ duration: 1.5, delay: 0.6 }}
         >
           <Image
-            src="/IMG_9836.jpg" // Replace with your image path
+            src="https://www.thai.run/wp-content/uploads/2020/04/thairun_logo_and_line-300x283.png" // Replace with your image path
             alt="About Us Image"
             width="100%"
             boxSize={["150px", "200px"]} // Adjust image size for different screen sizes

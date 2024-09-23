@@ -1,25 +1,6 @@
 "use client";
 
-import {
-  Box,
-  Container,
-  SimpleGrid,
-  Stack,
-  Text,
-  Flex,
-  Tag,
-  useColorModeValue,
-  Image,
-} from "@chakra-ui/react";
-import { ReactNode } from "react";
-
-const ListHeader = ({ children }: { children: ReactNode }) => {
-  return (
-    <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
-      {children}
-    </Text>
-  );
-};
+import { Box, Text, Flex, useColorModeValue, Image } from "@chakra-ui/react";
 
 export default function Footer() {
   return (

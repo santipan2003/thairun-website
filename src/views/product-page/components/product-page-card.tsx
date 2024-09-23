@@ -107,7 +107,7 @@ const ProductPageCard = () => {
                 </span>
               </Heading>
               <Text color={textColor} mb="4" flex="1">
-                &nbsp;&nbsp;&nbsp;&nbsp; {product.product_description}
+                {product.product_description}
               </Text>
               <Flex justify="flex-end" mt="auto">
                 <Link href={product.path} isExternal>

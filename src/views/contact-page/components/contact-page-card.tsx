@@ -11,18 +11,18 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaLine, FaFacebookMessenger } from "react-icons/fa"; // Icons for contact details
+import { FaEnvelope, FaLine, FaFacebookMessenger } from "react-icons/fa";
 
 const ContactPageCard = () => {
   return (
     <Flex
-      direction={["column", "row"]} // Stack vertically on mobile, horizontally on larger screens
+      direction={["column", "row"]}
       alignItems="center"
       justifyContent="center"
       zIndex="1"
       position="relative"
-      height="100%" // Ensure Flex takes full height of the viewport
-      px={["1rem", "4rem"]} // Add padding for better alignment
+      height="100%"
+      px={["1rem", "4rem"]}
       py="4rem"
     >
       {/* Left section: Contact information */}
@@ -63,7 +63,12 @@ const ContactPageCard = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.6 }}
           >
-            <HStack>
+            <HStack
+              _hover={{
+                transform: "scale(1.05)",
+                transition: "transform 0.2s",
+              }}
+            >
               <Icon as={FaEnvelope} w={8} h={8} color="gray.600" />
               <Link href="mailto:admin@thai.run" isExternal>
                 <Text
@@ -83,7 +88,12 @@ const ContactPageCard = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.8 }}
           >
-            <HStack>
+            <HStack
+              _hover={{
+                transform: "scale(1.05)",
+                transition: "transform 0.2s",
+              }}
+            >
               <Icon as={FaLine} w={8} h={8} color="gray.600" />
               <Link href="https://line.me/R/ti/p/@thairun" isExternal>
                 <Text
@@ -103,7 +113,12 @@ const ContactPageCard = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 1 }}
           >
-            <HStack>
+            <HStack
+              _hover={{
+                transform: "scale(1.05)",
+                transition: "transform 0.2s",
+              }}
+            >
               <Icon as={FaFacebookMessenger} w={8} h={8} color="gray.600" />
               <Link href="https://m.me/thaidotrun" isExternal>
                 <Text
@@ -127,10 +142,10 @@ const ContactPageCard = () => {
           transition={{ duration: 1.5, delay: 0.6 }}
         >
           <Image
-            src="/IMG_9836.jpg" // Replace with your image path
+            src="/IMG_9836.jpg"
             alt="Contact Us Image"
             width="100%"
-            boxSize={["300px", "400px"]} // Adjust image size for different screen sizes
+            boxSize={["300px", "400px"]}
             borderRadius="lg"
             boxShadow="lg"
           />
