@@ -7,7 +7,7 @@ import ProductPageCard from "../product-page/components/product-page-card";
 import UpdatePageCard from "../update-page/components/update-page-card";
 import PartnerPageCard from "../partner-page/components/partner-page-card";
 import ContactPageCard from "../contact-page/components/contact-page-card";
-import SlidePageCard from "../slide-page/components/slide-page-card"
+// import SlidePageCard from "../slide-page/components/slide-page-card"
 
 export const LandingPage: NextPage = () => {
   return (
@@ -31,9 +31,9 @@ export const LandingPage: NextPage = () => {
         <Box id="contact" as="section" width="100%" overflowX="hidden">
           <ContactPageCard />
         </Box>
-        <Box id="slide" as="section" width="100%" overflowX="hidden">
+        {/* <Box id="slide" as="section" width="100%" overflowX="hidden">
           <SlidePageCard />
-        </Box>
+        </Box> */}
       </Stack>
     </Layout>
   );

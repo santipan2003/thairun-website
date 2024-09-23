@@ -31,13 +31,18 @@ const LandingPageCard = () => {
         zIndex="1" // Ensure content is above the overlay
         position="relative"
         height="100%" // Ensure Flex takes full height of the viewport
+        px={[4, 8]} // Padding X for responsiveness
+        textAlign="center" // Center text on smaller screens
       >
-        <Box mr="25rem">
+        <Box>
           {/* Hero Heading */}
-
-          <Heading fontSize={["5xl", "6xl"]} color="white" fontWeight="bold">
+          <Heading
+            fontSize={["4xl", "5xl", "6xl"]}
+            color="white"
+            fontWeight="bold"
+          >
             www.thai.run <br />
-            <Text fontSize={["2xl", "3xl"]}>
+            <Text fontSize={["xl", "2xl", "3xl"]}>
               เทคโนโลยีคนไทย เพื่องานวิ่งไทย <br />
               สนับสนุนโดย
               <Text as="span" color="#FF9900">
