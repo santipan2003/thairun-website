@@ -16,7 +16,7 @@ const ContactPageCard = () => {
       direction="column"
       alignItems="center"
       justifyContent="flex-start"
-      bg={useColorModeValue("gray.50", "gray.900")}
+      bg={useColorModeValue("gray.50", "black")}
       px={["1rem", "2rem"]}
       py="2rem"
       mt="1rem"
@@ -29,7 +29,7 @@ const ContactPageCard = () => {
         fontSize={["3xl", "4xl"]}
         textAlign="center"
         mb="1.5rem"
-        color={useColorModeValue("gray.800", "white")}
+        color={useColorModeValue("gray.800", "gray.700")}
       >
         CONTACT{" "}
         <Box as="span" color={useColorModeValue("#FF9900", "#FF9900")}>
@@ -90,13 +90,17 @@ const ContactMethod: React.FC<ContactMethodProps> = ({
   label,
   value,
 }) => {
+  const bgColor = useColorModeValue("white", "gray.800");
+  const iconColor = useColorModeValue("gray.600", "gray.300");
+  const textColor = useColorModeValue("gray.800", "white");
+
   return (
     <Flex
       alignItems="center"
       justifyContent="center"
       py={3}
       px={4}
-      bg={useColorModeValue("white", "gray.800")}
+      bg={bgColor}
       shadow="md"
       borderRadius="md"
       _hover={{
@@ -105,12 +109,12 @@ const ContactMethod: React.FC<ContactMethodProps> = ({
         shadow: "lg",
       }}
     >
-      <Icon as={icon} w={6} h={6} color="gray.600" />
+      <Icon as={icon} w={6} h={6} color={iconColor} />
       <Link href={href} isExternal ml={3}>
         <Text
           fontSize="lg"
           fontWeight="medium"
-          color={useColorModeValue("gray.800", "white")}
+          color={textColor}
           _hover={{ color: "#FF9900" }}
         >
           {label}: {value}

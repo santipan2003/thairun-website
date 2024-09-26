@@ -15,6 +15,7 @@ import {
   Heading,
   Text,
   useBreakpointValue,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { Swiper as SwiperType } from "swiper";
 
@@ -33,7 +34,7 @@ const testimonials = [
     title: "Frontend Developer",
     avatar: "https://randomuser.me/api/portraits/women/1.jpg",
     testimonial:
-      "Jane is a highly skilled frontend developer with a love for crafting modern, responsive web applications. She&rsquo;s the brains behind the code.",
+      "Jane is a highly skilled frontend developer with a love for crafting modern, responsive web applications. She’s the brains behind the code.",
   },
   {
     id: 3,
@@ -41,7 +42,7 @@ const testimonials = [
     title: "Full Stack Developer",
     avatar: "https://randomuser.me/api/portraits/men/3.jpg",
     testimonial:
-      "With a background in full stack development, Sam excels in building scalable applications. He ensures that everything runs smoothly behind the scenes.",
+      "With a background in full stack development, Sam excels in building scalable applications. ",
   },
   {
     id: 4,
@@ -69,6 +70,7 @@ const TestimonialCarousel = () => {
   };
 
   const slidesPerView = useBreakpointValue({ base: 1, md: 2, lg: 3 });
+  const textColor = useColorModeValue("gray.700", "gray.700"); // Set text color based on color mode
 
   return (
     <Box maxW="1400px" mx="auto" p={6}>
@@ -111,10 +113,10 @@ const TestimonialCarousel = () => {
               <Heading as="h3" size="md" mb={2}>
                 {testimonial.name}
               </Heading>
-              <Text fontSize="sm" color="gray.500" mb={4}>
+              <Text fontSize="sm" color={textColor} mb={4}>
                 {testimonial.title}
               </Text>
-              <Text fontSize="md" fontStyle="italic">
+              <Text fontSize="md" fontStyle="italic" color={textColor}>
                 &quot;{testimonial.testimonial}&quot;
               </Text>
             </Box>

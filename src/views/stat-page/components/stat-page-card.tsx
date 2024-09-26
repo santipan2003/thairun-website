@@ -30,6 +30,9 @@ const StatCard: React.FC<StatCardProps> = ({
   stat,
   onComplete,
 }) => {
+  const iconColor = useColorModeValue("#FF9900", "#FF9900");
+  const labelColor = useColorModeValue("black", "white");
+
   return (
     <Flex
       direction="column"
@@ -37,7 +40,7 @@ const StatCard: React.FC<StatCardProps> = ({
       justify="center"
       textAlign="center"
       p={4}
-      color="#FF9900" // Set the color to #FF9900 for both light and dark mode
+      color={iconColor} // Set the color to #FF9900 for both light and dark mode
     >
       <Icon as={icon} w={10} h={10} mb={2} />
       <motion.div
@@ -47,7 +50,7 @@ const StatCard: React.FC<StatCardProps> = ({
         onAnimationComplete={onComplete} // Trigger countUp after animation completes
       >
         <motion.div
-          style={{ fontSize: "2rem", fontWeight: "bold", color: "#FF9900" }} // Set style for the number
+          style={{ fontSize: "2rem", fontWeight: "bold", color: iconColor }} // Set style for the number
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
@@ -56,7 +59,7 @@ const StatCard: React.FC<StatCardProps> = ({
         </motion.div>
       </motion.div>
 
-      <Text fontSize="lg" fontWeight="medium" mt={2} color="black">
+      <Text fontSize="lg" fontWeight="medium" mt={2} color={labelColor}>
         {label}
       </Text>
     </Flex>
@@ -109,7 +112,7 @@ const StatPageCard = () => {
     <Flex
       justify="center"
       align="center"
-      bg={useColorModeValue("gray.50", "gray.900")}
+      bg={useColorModeValue("gray.50", "black")} // Set bg to black in dark mode
       p={5}
     >
       <Wrap spacing={10} justify="center" align="center">
