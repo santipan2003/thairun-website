@@ -1,0 +1,20 @@
+.mySwiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ff9900; /* Custom highlight color for the bullets */
+  opacity: 1;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #ff9900; /* Keep the active bullet the same color */
+  transform: scale(1.5); /* Enlarge the active bullet */
+}
+
+.mySwiper .swiper-pagination {
+  bottom: -70px; /* ปรับค่าเพื่อให้ Pagination ขยับลงไปมากขึ้น */
+}
+
+
+.mySwiper .swiper-pagination-bullet:hover {
+  background-color: #e08e00; /* Add hover effect to pagination bullets */
+}

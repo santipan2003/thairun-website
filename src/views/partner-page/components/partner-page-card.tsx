@@ -33,32 +33,30 @@ const PartnerPageCard = () => {
       justifyContent="center"
       zIndex="1"
       position="relative"
-      px={["1rem", "4rem"]}
+      px={["1rem", "2rem", "4rem"]} // Adjust padding for different screen sizes
       py="4rem"
       width="100%"
     >
       {/* Clients Section */}
-      <Box textAlign="center" mb="4rem">
-        <Heading fontSize={["4xl", "5xl"]} mb="2rem">
+      <Box textAlign="center" mb="4rem" width="100%">
+        <Heading fontSize={["2xl", "3xl", "4xl", "5xl"]} mt="-4rem" mb="2rem">
           OUR <span style={{ color: "#FF9900" }}>CLIENTS</span>
         </Heading>
 
-        <SimpleGrid columns={[2, 3, 5]} spacing="40px" width="100%">
+        <SimpleGrid
+          columns={[5, 6, 8, 12]} // 2 columns on small screens, 12 columns on large screens
+          gap={["5px", "8px", "10px"]} // Adjust the gap for different screen sizes
+          width="100%"
+        >
           {clients.map((client) => (
             <motion.div key={client.id} whileHover={{ scale: 1.075 }}>
-              <Box
-                p="2"
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-              >
+              <Box display="flex" flexDirection="column" alignItems="center">
                 <Image
                   src={client.image}
                   alt={`Logo of ${client.category}`}
                   objectFit="contain"
-                  width="100%"
-                  height="100px" // Adjust the height as needed for logos
-                  mb="4"
+                  width="100%" // Ensure full width of the grid cell
+                  height={["60px", "70px", "80px"]} // Adjust the height for responsive design
                   mx="auto"
                 />
               </Box>
@@ -68,31 +66,29 @@ const PartnerPageCard = () => {
       </Box>
 
       {/* Partners Section */}
-      <Box textAlign="center" mb="4rem">
-        <Heading fontSize={["4xl", "5xl"]} mb="2rem">
+      <Box textAlign="center" mb="-4rem" width="100%">
+        <Heading fontSize={["2xl", "3xl", "4xl", "5xl"]} mt="-2rem" mb="2rem">
           OUR <span style={{ color: "#FF9900" }}>PARTNERS</span>
         </Heading>
 
-        <SimpleGrid columns={[2, 3, 5]} spacing="40px" width="100%">
+        <SimpleGrid
+          columns={[5, 6, 8 , 12]} // 2 columns on small screens, 12 columns on large screens
+          gap={["5px", "8px", "10px"]} // Adjust the gap for different screen sizes
+          width="100%"
+        >
           {otherPartners.map((partner) => (
             <motion.div
               key={partner.id}
               transition={{ duration: 0.5, delay: 0.1 }}
               whileHover={{ scale: 1.075 }}
             >
-              <Box
-                p="2"
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-              >
+              <Box display="flex" flexDirection="column" alignItems="center">
                 <Image
                   src={partner.image}
                   alt={`Logo of ${partner.category}`}
                   objectFit="contain"
-                  width="100%"
-                  height="100px" // Adjust the height as needed for logos
-                  mb="4"
+                  width="100%" // Ensure full width of the grid cell
+                  height={["60px", "70px", "80px"]} // Adjust the height for responsive design
                   mx="auto"
                 />
               </Box>

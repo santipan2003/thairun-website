@@ -16,7 +16,6 @@ import "swiper/swiper-bundle.css";
 import "swiper/css";
 import "swiper/css/pagination";
 
-
 const UpdatePageCard = () => {
   const [updateData, setUpdateData] = useState<Update[]>([]); // Define state with Update type
 
@@ -46,22 +45,34 @@ const UpdatePageCard = () => {
         width="100%"
       >
         <Box textAlign="center" mb="4rem">
-         
-            <Heading fontSize={["4xl", "5xl"]}>
-              UPDATES
-              <span style={{ color: useColorModeValue("#FF9900", "#FF9900") }}>
-                {" "}
-                GALLERY
-              </span>
-            </Heading>
+          <Heading fontSize={["4xl", "5xl"]}>
+            UPDATES
+            <span style={{ color: useColorModeValue("#FF9900", "#FF9900") }}>
+              {" "}
+              GALLERY
+            </span>
+          </Heading>
         </Box>
 
         {/* Swiper Image Carousel */}
         <Swiper
-          slidesPerView={3}
           spaceBetween={30}
           pagination={{
             clickable: true,
+          }}
+          breakpoints={{
+            // when window width is >= 320px (Mobile screens)
+            320: {
+              slidesPerView: 1,
+            },
+            // when window width is >= 768px (Tablet screens)
+            768: {
+              slidesPerView: 2,
+            },
+            // when window width is >= 1024px (Desktop screens)
+            1024: {
+              slidesPerView: 3,
+            },
           }}
           modules={[Pagination]}
           className="mySwiper"

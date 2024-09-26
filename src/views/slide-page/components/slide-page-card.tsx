@@ -1,6 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Marathon } from "@/interfaces";
+import axios from "axios";
 
 const SlidePageCard: React.FC = () => {
+  const [marathons, setMarathons] = useState<Marathon[]>([]);
+
+  const fetchMarathons = async () => {
+    try {
+      const response = await axios.get("/api/marathon");
+      setMarathons(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchMarathons();
+  }, []);
+
   useEffect(() => {
     const next = document.querySelector(".next") as HTMLButtonElement | null;
     const prev = document.querySelector(".prev") as HTMLButtonElement | null;
@@ -8,7 +25,6 @@ const SlidePageCard: React.FC = () => {
     next?.addEventListener("click", handleNextClick);
     prev?.addEventListener("click", handlePrevClick);
 
-    // Cleanup event listeners on component unmount
     return () => {
       next?.removeEventListener("click", handleNextClick);
       prev?.removeEventListener("click", handlePrevClick);
@@ -34,78 +50,19 @@ const SlidePageCard: React.FC = () => {
   return (
     <div className="container">
       <div className="slide">
-        <div
-          className="item"
-          style={{ backgroundImage: "url(https://i.ibb.co/qCkd9jS/img1.jpg)" }}
-        >
-          <div className="content">
-            <div className="name">Switzerland</div>
-            <div className="des">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
+        {marathons.map((item, index) => (
+          <div
+            key={index}
+            className="item"
+            style={{ backgroundImage: item.backgroundImage }}
+          >
+            <div className="overlay"></div>
+            <div className="content">
+              <div className="name">{item.name}</div>
+              <div className="des">{item.description}</div>
             </div>
-            <button>See More</button>
           </div>
-        </div>
-        <div
-          className="item"
-          style={{ backgroundImage: "url(https://i.ibb.co/jrRb11q/img2.jpg)" }}
-        >
-          <div className="content">
-            <div className="name">Finland</div>
-            <div className="des">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
-            </div>
-            <button>See More</button>
-          </div>
-        </div>
-        <div
-          className="item"
-          style={{ backgroundImage: "url(https://i.ibb.co/NSwVv8D/img3.jpg)" }}
-        >
-          <div className="content">
-            <div className="name">Iceland</div>
-            <div className="des">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
-            </div>
-            <button>See More</button>
-          </div>
-        </div>
-        <div
-          className="item"
-          style={{ backgroundImage: "url(https://i.ibb.co/Bq4Q0M8/img4.jpg)" }}
-        >
-          <div className="content">
-            <div className="name">Australia</div>
-            <div className="des">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
-            </div>
-            <button>See More</button>
-          </div>
-        </div>
-        <div
-          className="item"
-          style={{ backgroundImage: "url(https://i.ibb.co/jTQfmTq/img5.jpg)" }}
-        >
-          <div className="content">
-            <div className="name">Netherland</div>
-            <div className="des">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
-            </div>
-            <button>See More</button>
-          </div>
-        </div>
-        <div
-          className="item"
-          style={{ backgroundImage: "url(https://i.ibb.co/RNkk6L0/img6.jpg)" }}
-        >
-          <div className="content">
-            <div className="name">Ireland</div>
-            <div className="des">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
-            </div>
-            <button>See More</button>
-          </div>
-        </div>
+        ))}
       </div>
 
       <div className="button">

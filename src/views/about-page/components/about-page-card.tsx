@@ -2,32 +2,32 @@ import {
   Box,
   Heading,
   Text,
-  Flex,
+  Grid,
+  GridItem,
   useColorModeValue,
   Image,
 } from "@chakra-ui/react";
 
 const AboutPageCard = () => {
   return (
-    <Flex
-      direction={["column", "row"]} // Stack vertically on mobile, horizontally on larger screens
+    <Grid
+      templateColumns={["1fr", "1fr 1fr"]} // Stack in one column on mobile, two columns on larger screens
+      gap={8} // Add spacing between text and image
       alignItems="center"
       justifyContent="center"
-      zIndex="1"
-      position="relative"
-      height="100%" // Ensure Flex takes full height of the viewport
-      px={["1rem", "4rem"]} // Add padding for better alignment
+      px={["1rem", "4rem"]} // Padding adjustment for different screen sizes
       py="4rem"
     >
-      <Box flex="1" textAlign={["center", "left"]} pr={["0", "2rem"]}>
-        
+      {/* Text Section */}
+      <GridItem>
+        <Box textAlign={["center", "left"]}>
           <Heading fontSize={["4xl", "5xl"]}>
             ABOUT{" "}
             <span style={{ color: useColorModeValue("#FF9900", "#FF9900") }}>
               US
             </span>
           </Heading>
-      
+
           <Text
             mt="1rem"
             fontSize="lg"
@@ -37,7 +37,7 @@ const AboutPageCard = () => {
           >
             บริษัท ไทยดอทรัน จำกัด ฮับความสุขของนักวิ่ง
           </Text>
-        
+
           <Text
             mt="1rem"
             fontSize="lg"
@@ -48,18 +48,20 @@ const AboutPageCard = () => {
             คือ ระบบลงทะเบียน ระบบค้นหาภาพถ่ายด้วยใบหน้า การส่งผลวิ่ง
             ระบบเกี่ยวกับการจัดงานอีเว้นท์ด้านกีฬาทุกประเภท
           </Text>
-      </Box>
+        </Box>
+      </GridItem>
 
-      <Box flex="1" display="flex" justifyContent="center" alignItems="center">
-      
-          <Image
-            src="https://www.thai.run/wp-content/uploads/2020/04/thairun_logo_and_line-300x283.png" // Replace with your image path
-            alt="About Us Image"
-            width="100%"
-            boxSize={["150px", "200px"]} // Adjust image size for different screen sizes
-          />
-      </Box>
-    </Flex>
+      {/* Image Section */}
+      <GridItem display="flex" justifyContent="center">
+        <Image
+          src="https://www.thai.run/wp-content/uploads/2020/04/thairun_logo_and_line-300x283.png" // Replace with your image path
+          alt="About Us Image"
+          objectFit="contain"
+          width="100%"
+          boxSize={["150px", "250px", "300px"]} // Make the image more flexible for different screen sizes
+        />
+      </GridItem>
+    </Grid>
   );
 };
 

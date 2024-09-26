@@ -1,84 +1,4 @@
-import { Partner, Product, Update } from "@/interfaces";;
-
-export const productData: Product[] = [
-  {
-    id: 1,
-    product_name: "VIRTUAL ACTIVITY ",
-    product_header: "PLATFORM",
-    product_description:
-      "กิจกรรมส่งเสริมการดูแลสุขภาพ ให้กับบุคลากรของคุณ กิจกรรมกลุ่ม ในรูปแบบ New Normal ถึงอยู่ไกล แต่ใจเราใกล้กันสมาชิกในองค์กรสามารถเข้าร่วมกิจกรรมได้ทุกที่ ทุกเวลา เข้าร่วมกิจกรรมพร้อมกันได้หลายคนผ่านอุปกรณ์สมาร์ทโฟน สนับสนุนทุกระบบปฏิบัติการ iOS และ Android",
-    image: "https://www.thai.run/wp-content/uploads/2021/01/vap_logo.png",
-    path: "https://vap.thai.run/",
-  },
-  {
-    id: 2,
-    product_name: "MANGOMANGO",
-    product_header: ".APP",
-    product_description:
-      "เราเป็นมากกว่าคลังภาพสำหรับงานพิเศษของคุณงานแต่งงาน งานรับปริญญา งานกีฬาประเพณี หรืองานพิเศษไหน เราก็พร้อมให้บริการคลังภาพขนาดใหญ่ตามที่คุณต้องการ พร้อมเทคโนโลยีการค้นหาภาพที่จะทำให้ผู้ร่วมงาน ประทับไจ ไม่ว่าผู้ร่วมงานของคุณจะอยู่มุมไหน ของภาพ พวกเขาจะไม่พลาดทุกวินาทีสำคัญ",
-    image:
-      "https://www.thai.run/wp-content/uploads/2022/09/mango_mango_logo.png",
-    path: "https://mangomango.app/",
-  },
-  {
-    id: 3,
-    product_name: "RACE",
-    product_header: "THAIRUN",
-    product_description:
-      "แพลตฟอร์มสำหรับ รับสมัครงานวิ่งออนไลน์อันดับ 1 ของประเทศไทย เป็นแพลตฟอร์มอัตโนมัติเต็มรูปแบบซึ่งผู้จัดงานสร้างกิจกรรมการวิ่งใหม่ได้อย่างง่ายดาย เริ่มรับข้อมูลนักวิ่งและเก็บเงินค่าลงทะเบียนได้ที่นี่",
-    image:
-      "https://www.thai.run/wp-content/uploads/2020/03/PIC_RACE1-e1584423501873.png",
-    path: "https://race.thai.run/",
-  },
-  {
-    id: 4,
-    product_name: "SHOP",
-    product_header: "THAIRUN",
-    product_description:
-      "เว็บร้านค้า shop.thai.run เป็นร้านค้าออนไลน์ ที่ขายเสื้อวิ่งและผลิตภัณฑ์อื่นๆ จากพันธมิตรของเรา ผลิตภัณฑ์ สามารถเปิดร้านค้าในระบบของเรานักวิ่งที่ชำระเงิน",
-    image:
-      "https://www.thai.run/wp-content/uploads/2020/03/PIC_SHOP1-e1584425784571.png",
-    path: "https://shop.thai.run/",
-  },
-  {
-    id: 5,
-    product_name: "PHOTO",
-    product_header: "THAIRUN",
-    product_description:
-      "เป็นแพลตฟอร์มที่ช่วยอำนวยความสะดวกให้แก่ช่างภาพ โดยช่างภาพสามารถอัปโหลดรูปภาพจากงานวิ่งเข้าสู่ระบบ ระบบจะติดแท็กรูปโดยอัตโนมัติโดยรูปถ่ายที่มีหมายเลขหรือเบอร์นักวิ่งจะสามารถค้นหาภาพเหล่านี้ได้ โดยระบบใช้การตรวจสอบ BIB อัตโนมัติ",
-    image:
-      "https://www.thai.run/wp-content/uploads/2020/03/PIC_PHOTO1-e1584426013331.png",
-    path: "https://photo.thai.run/",
-  },
-  {
-    id: 6,
-    product_name: "VIRTUAL RUN",
-    product_header: "THAIRUN",
-    product_description:
-      "การวิ่งภายในระยะทางและวันที่ กำหนด สามารถวิ่งที่ไหนและเวลาใดก็ได้ เป็นกิจกรรมที่เพิ่มความยืดหยุ่นในการเข้าร่วมกิจกรรมการวิ่งให้มากขึ้น ในบางกิจกรรมอาจมีกฎกติกาเพิ่มเติม",
-    image: "https://www.thai.run/wp-content/uploads/2020/03/PIC_VR1.png",
-    path: "https://vr.thai.run/",
-  },
-  {
-    id: 7,
-    product_name: "READ",
-    product_header: "THAIRUN",
-    product_description:
-      "สำนักข่าวไทยรันจัดการเรื่องวิ่ง จัดทำเรื่องสั้นนักวิ่ง โค้ชส่วนตัวของคุณ อ่านได้เลยที่นี่",
-    image:
-      "https://www.thai.run/wp-content/uploads/2020/03/PIC_READ1-e1584445519511.png",
-    path: "https://read.thai.run/",
-  },
-  {
-    id: 8,
-    product_name: "WHERE",
-    product_header: "THAIRUN",
-    product_description:
-      "ศูนย์รวมสถานที่วิ่ง สามารถค้นหากิจกรรมงานวิ่ง ข้อมูล รูปและความคิดเห็นจากสมาชิกคนอื่น ๆ  อ่านได้เลยที่นี่",
-    image: "https://www.thai.run/wp-content/uploads/2020/04/Untitled-1.png",
-    path: "https://marathon.thai.run/",
-  },
-];
+import { Partner, Update, Marathon } from "@/interfaces";
 
 export const updateData: Update[] = [
   {
@@ -124,104 +44,120 @@ export const updateData: Update[] = [
 ];
 
 export const partnerData: Partner[] = [
+  // Clients Category (36 Items)
+  { id: 1, image: "IMG_9844.jpg", category: "Clients" },
+  { id: 2, image: "IMG_9839.jpg", category: "Clients" },
+  { id: 3, image: "IMG_9843.jpg", category: "Clients" },
+  { id: 4, image: "IMG_9841.jpg", category: "Clients" },
+  { id: 5, image: "IMG_9845.jpg", category: "Clients" },
+  { id: 6, image: "IMG_9840.jpg", category: "Clients" },
+  { id: 7, image: "IMG_9838.jpg", category: "Clients" },
+  { id: 8, image: "IMG_9842.jpg", category: "Clients" },
+  { id: 9, image: "IMG_9844.jpg", category: "Clients" },
+  { id: 10, image: "IMG_9839.jpg", category: "Clients" },
+  { id: 11, image: "IMG_9843.jpg", category: "Clients" },
+  { id: 12, image: "IMG_9841.jpg", category: "Clients" },
+  { id: 13, image: "IMG_9845.jpg", category: "Clients" },
+  { id: 14, image: "IMG_9840.jpg", category: "Clients" },
+  { id: 15, image: "IMG_9838.jpg", category: "Clients" },
+  { id: 16, image: "IMG_9842.jpg", category: "Clients" },
+  { id: 17, image: "IMG_9844.jpg", category: "Clients" },
+  { id: 18, image: "IMG_9839.jpg", category: "Clients" },
+  { id: 19, image: "IMG_9843.jpg", category: "Clients" },
+  { id: 20, image: "IMG_9841.jpg", category: "Clients" },
+  { id: 21, image: "IMG_9845.jpg", category: "Clients" },
+  { id: 22, image: "IMG_9840.jpg", category: "Clients" },
+  { id: 23, image: "IMG_9838.jpg", category: "Clients" },
+  { id: 24, image: "IMG_9842.jpg", category: "Clients" },
+  { id: 25, image: "IMG_9844.jpg", category: "Clients" },
+  { id: 26, image: "IMG_9839.jpg", category: "Clients" },
+  { id: 27, image: "IMG_9843.jpg", category: "Clients" },
+  { id: 28, image: "IMG_9841.jpg", category: "Clients" },
+  { id: 29, image: "IMG_9845.jpg", category: "Clients" },
+  { id: 30, image: "IMG_9840.jpg", category: "Clients" },
+  { id: 31, image: "IMG_9838.jpg", category: "Clients" },
+  { id: 32, image: "IMG_9842.jpg", category: "Clients" },
+  { id: 33, image: "IMG_9844.jpg", category: "Clients" },
+  { id: 34, image: "IMG_9839.jpg", category: "Clients" },
+  { id: 35, image: "IMG_9843.jpg", category: "Clients" },
+  { id: 36, image: "IMG_9841.jpg", category: "Clients" },
+
+  // Partners Category (36 Items)
+  { id: 37, image: "IMG_9844.jpg", category: "Partners" },
+  { id: 38, image: "IMG_9839.jpg", category: "Partners" },
+  { id: 39, image: "IMG_9843.jpg", category: "Partners" },
+  { id: 40, image: "IMG_9841.jpg", category: "Partners" },
+  { id: 41, image: "IMG_9845.jpg", category: "Partners" },
+  { id: 42, image: "IMG_9840.jpg", category: "Partners" },
+  { id: 43, image: "IMG_9838.jpg", category: "Partners" },
+  { id: 44, image: "IMG_9842.jpg", category: "Partners" },
+  { id: 45, image: "IMG_9844.jpg", category: "Partners" },
+  { id: 46, image: "IMG_9839.jpg", category: "Partners" },
+  { id: 47, image: "IMG_9843.jpg", category: "Partners" },
+  { id: 48, image: "IMG_9841.jpg", category: "Partners" },
+  { id: 49, image: "IMG_9845.jpg", category: "Partners" },
+  { id: 50, image: "IMG_9840.jpg", category: "Partners" },
+  { id: 51, image: "IMG_9838.jpg", category: "Partners" },
+  { id: 52, image: "IMG_9842.jpg", category: "Partners" },
+  { id: 53, image: "IMG_9844.jpg", category: "Partners" },
+  { id: 54, image: "IMG_9839.jpg", category: "Partners" },
+  { id: 55, image: "IMG_9843.jpg", category: "Partners" },
+  { id: 56, image: "IMG_9841.jpg", category: "Partners" },
+  { id: 57, image: "IMG_9845.jpg", category: "Partners" },
+  { id: 58, image: "IMG_9840.jpg", category: "Partners" },
+  { id: 59, image: "IMG_9838.jpg", category: "Partners" },
+  { id: 60, image: "IMG_9842.jpg", category: "Partners" },
+  { id: 61, image: "IMG_9844.jpg", category: "Partners" },
+  { id: 62, image: "IMG_9839.jpg", category: "Partners" },
+  { id: 63, image: "IMG_9843.jpg", category: "Partners" },
+  { id: 64, image: "IMG_9841.jpg", category: "Partners" },
+  { id: 65, image: "IMG_9845.jpg", category: "Partners" },
+  { id: 66, image: "IMG_9840.jpg", category: "Partners" },
+  { id: 67, image: "IMG_9838.jpg", category: "Partners" },
+  { id: 68, image: "IMG_9842.jpg", category: "Partners" },
+  { id: 69, image: "IMG_9844.jpg", category: "Partners" },
+  { id: 61, image: "IMG_9839.jpg", category: "Partners" },
+  { id: 62, image: "IMG_9843.jpg", category: "Partners" },
+  { id: 63, image: "IMG_9841.jpg", category: "Partners" },
+];
+
+
+
+export const marathonData: Marathon[] = [
   {
-    id: 1,
-    image: "IMG_9844.jpg",
-    category: "Clients",
+    name: "www.thai.run",
+    description:
+      "Experience the vibrant streets of Thailand's capital as you run through historical landmarks and scenic routes.",
+    backgroundImage: "url(pexels-runffwpu-7631338.jpg)",
   },
   {
-    id: 2,
-    image: "IMG_9839.jpg",
-    category: "Clients",
+    name: "Chiang Mai Marathon",
+    description:
+      "Run through the mountainous terrain of Northern Thailand, passing beautiful temples and lush landscapes.",
+    backgroundImage: "url(pexels-runffwpu-2526878.jpg)",
   },
   {
-    id: 3,
-    image: "IMG_9843.jpg",
-    category: "Clients",
+    name: "Phuket Marathon",
+    description:
+      "Enjoy the tropical paradise of Phuket with a marathon that takes you along stunning beaches and coastal roads.",
+    backgroundImage: "url(athlete-prepared-run-athletics-track.jpg)",
   },
   {
-    id: 4,
-    image: "IMG_9841.jpg",
-    category: "Clients",
+    name: "Pattaya Marathon",
+    description:
+      "Join the Pattaya Marathon for a thrilling race along the city's famous beach and vibrant streets.",
+    backgroundImage: "url(side-view-fit-friends-outdoors.jpg)",
   },
   {
-    id: 5,
-    image: "IMG_9845.jpg",
-    category: "Clients",
+    name: "Khon Kaen Marathon",
+    description:
+      "Explore the cultural heart of Thailand's Isan region with a marathon through Khon Kaen's urban and rural landscapes.",
+    backgroundImage: "url(pexels-runffwpu-14585153.jpg)",
   },
   {
-    id: 6,
-    image: "IMG_9840.jpg",
-    category: "Clients",
-  },
-  {
-    id: 7,
-    image: "IMG_9838.jpg",
-    category: "Clients",
-  },
-  {
-    id: 8,
-    image: "IMG_9842.jpg",
-    category: "Clients",
-  },
-  {
-    id: 9,
-    image: "IMG_9844.jpg",
-    category: "Clients",
-  },
-  {
-    id: 10,
-    image: "IMG_9839.jpg",
-    category: "Clients",
-  },
-  {
-    id: 11,
-    image: "IMG_9844.jpg",
-    category: "Partners",
-  },
-  {
-    id: 12,
-    image: "IMG_9839.jpg",
-    category: "Partners",
-  },
-  {
-    id: 13,
-    image: "IMG_9843.jpg",
-    category: "Partners",
-  },
-  {
-    id: 14,
-    image: "IMG_9841.jpg",
-    category: "Partners",
-  },
-  {
-    id: 15,
-    image: "IMG_9845.jpg",
-    category: "Partners",
-  },
-  {
-    id: 16,
-    image: "IMG_9840.jpg",
-    category: "Partners",
-  },
-  {
-    id: 17,
-    image: "IMG_9838.jpg",
-    category: "Partners",
-  },
-  {
-    id: 18,
-    image: "IMG_9842.jpg",
-    category: "Partners",
-  },
-  {
-    id: 19,
-    image: "IMG_9844.jpg",
-    category: "Partners",
-  },
-  {
-    id: 20,
-    image: "IMG_9839.jpg",
-    category: "Partners",
+    name: "Surat Thani Marathon",
+    description:
+      "Take on the challenge of the Surat Thani Marathon, running along riversides and lush greenery in Southern Thailand.",
+    backgroundImage: "url(pexels-runffwpu-7226772.jpg)",
   },
 ];

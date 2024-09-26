@@ -5,7 +5,7 @@ const LandingPageCard = () => {
     <Box
       position="relative"
       width="100%"
-      height="100vh"
+      height={{ base: "50vh", md: "100vh" }} // Adjust height for mobile screens
       overflow="hidden"
       backgroundImage="url('/UXUI Thai.run.svg')" // Add background image
       backgroundSize="cover" // Ensure the image covers the full area
@@ -34,7 +34,9 @@ const LandingPageCard = () => {
         px={[4, 8]} // Padding X for responsiveness
         textAlign="center" // Center text on smaller screens
       >
-        <Box>
+        <Box mr={{ base: "0", md: "25rem" }}>
+          {" "}
+          {/* Adjust margin-right for mobile screens */}
           {/* Hero Heading */}
           <Heading
             fontSize={["4xl", "5xl", "6xl"]}

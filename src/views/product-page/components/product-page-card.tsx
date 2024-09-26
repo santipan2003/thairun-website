@@ -7,13 +7,13 @@ import {
   Image,
   SimpleGrid,
   Button,
-  Link,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Product } from "@/interfaces";
 import { FaRunning } from "react-icons/fa";
+import Link from "next/link"; // Import Next.js Link
 
 const ProductPageCard = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -48,71 +48,87 @@ const ProductPageCard = () => {
       py="4rem"
       width="100%"
     >
-      <Box textAlign="center" mb="4rem">
-       
-          <Heading fontSize={["4xl", "5xl"]}>
-            PRODUCTS
-            <span style={{ color: highlightColor }}> LIST</span>
-          </Heading>
+      <Box textAlign="center" mb="2rem">
+        {/* Reduced bottom margin */}
+        <Heading fontSize={["4xl", "5xl"]}>
+          PRODUCTS
+          <span style={{ color: highlightColor }}> LIST</span>
+        </Heading>
       </Box>
 
-      <SimpleGrid columns={[1, 2, 3]} spacing="40px" width="100%">
-        {products.map((product) => (
+      <SimpleGrid
+        columns={{ base: 1, lg: 2, xl: 3 }}
+        spacing="40px"
+        width="100%"
+      >
+        {products.slice(0, 9).map((product) => (
           <motion.div
             key={product.id}
             transition={{ duration: 0.5, delay: 0.1 }}
-            whileHover={{ scale: 1.075 }}
+            whileHover={{ scale: 1.025 }}
           >
             <Box
               p="4"
-             
               bg={bgColor}
               display="flex"
-              flexDirection="column"
+              flexDirection="row"
               justifyContent="space-between"
               height="100%"
-              minHeight="400px"
+              minHeight="250px"
               transition="transform 0.3s ease"
+              borderRadius="lg" // Add rounded corners
+              boxShadow="md"
             >
               <Image
                 src={product.image}
                 alt={product.product_name}
                 boxSize="200px"
-                width="100%"
+                width="125px"
                 height="250px"
                 objectFit="cover"
                 mb="4"
                 mx="auto"
+                borderRadius="lg" // Add rounded corners to the image
               />
-              <Heading
-                as="h3"
-                fontSize="xl"
-                mb="2"
-                textAlign="center"
-                color={textColor}
+              <Flex
+                direction="column"
+                justifyContent="space-between"
+                flex="1"
+                ml="4"
+                mt="2"
               >
-                {product.product_name}
-                <span style={{ color: highlightColor }}>
-                  {" "}
-                  {product.product_header}
-                </span>
-              </Heading>
-              <Text color={textColor} mb="4" flex="1">
-                {product.product_description}
-              </Text>
-              <Flex justify="flex-end" mt="auto">
-                <Link href={product.path} isExternal>
-                  <Button
-                    variant="outline"
-                    colorScheme="yellow"
-                    borderRadius="full"
-                    borderColor={highlightColor}
-                    color={highlightColor}
-                    leftIcon={<FaRunning />}
-                  >
-                    เข้าสู่เว็บไซต์
-                  </Button>
-                </Link>
+                <Heading
+                  as="h3"
+                  fontSize="xl"
+                  mb="2"
+                  textAlign="left"
+                  color={textColor}
+                >
+                  {product.product_name}
+                  <span style={{ color: highlightColor }}>
+                    {" "}
+                    {product.product_header}
+                  </span>
+                </Heading>
+                <Text color={textColor} mb="4" flex="1" fontSize="sm">
+                  {product.product_description}
+                </Text>
+                <Flex justify="flex-end" mt="auto">
+                  <Link href={`/products/${product.id}`} passHref>
+                    <Button
+                      variant="outline"
+                      colorScheme="yellow"
+                      borderRadius="full"
+                      borderColor={highlightColor}
+                      color={highlightColor}
+                      leftIcon={<FaRunning />}
+                      size="sm"
+                      mt="-2rem"
+                    >
+                      อ่านต่อ
+                    </Button>
+                  </Link>
+                </Flex>
               </Flex>
             </Box>
           </motion.div>
