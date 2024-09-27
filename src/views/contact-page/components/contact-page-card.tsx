@@ -40,7 +40,7 @@ const ContactPageCard = () => {
             fontSize={["3xl", "4xl"]}
             textAlign="center"
             mb="1rem"
-            color={useColorModeValue("gray.800", "gray.700")}
+            color={useColorModeValue("gray.800", "white")}
           >
             CONTACT{" "}
             <Box as="span" color={useColorModeValue("#FF9900", "#FF9900")}>
@@ -129,7 +129,7 @@ const ContactMethod: React.FC<ContactMethodProps> = ({
   value,
   alt,
 }) => {
-  const bgColor = useColorModeValue("white", "gray.800");
+  const bgColor = useColorModeValue("white", "black"); // Toggle between white and black
   const textColor = useColorModeValue("gray.800", "white");
 
   return (
