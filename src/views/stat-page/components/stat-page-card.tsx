@@ -112,7 +112,7 @@ const StatPageCard = () => {
     <Flex
       justify="center"
       align="center"
-      bg={useColorModeValue("gray.50", "black")} // Set bg to black in dark mode
+      bg={useColorModeValue("white", "black")} // Set bg to white in light mode and black in dark mode
       p={5}
     >
       <Wrap spacing={10} justify="center" align="center">

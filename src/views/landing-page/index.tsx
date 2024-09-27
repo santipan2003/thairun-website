@@ -9,7 +9,7 @@ import PartnerPageCard from "../partner-page/components/partner-page-card";
 import ContactPageCard from "../contact-page/components/contact-page-card";
 import SlidePageCard from "../slide-page/components/slide-page-card";
 // import ProductOtherPageCard from "../product-other-page/components/product-other-card";
-import TestimonialCarousel from "../about-page/components/about-page-carousel";
+// import TestimonialCarousel from "../about-page/components/about-page-carousel";
 // import ProductOtherCarousel from "../product-other-page/components/product-other-carousel";
 import ProductOtherPageTable from "../product-other-page/components/product-other-card-table";
 import StatPageCard from "../stat-page/components/stat-page-card";
@@ -17,16 +17,16 @@ import StatPageCard from "../stat-page/components/stat-page-card";
 export const LandingPage: NextPage = () => {
   return (
     <Layout>
-      <Stack spacing={10} width="100%" overflowX="hidden">
+      <Stack spacing={5} width="100%" overflowX="hidden">
         <Box id="landing" as="section" width="100%" overflowX="hidden">
           <LandingPageCard />
         </Box>
         <Box id="about" as="section" width="100%" overflowX="hidden">
           <AboutPageCard />
         </Box>
-         <Box id="team" as="section" width="100%" overflowX="hidden">
+        {/* <Box id="team" as="section" width="100%" overflowX="hidden">
           <TestimonialCarousel />
-        </Box>
+        </Box> */}
         <Box id="team" as="section" width="100%" overflowX="hidden">
           <StatPageCard />
         </Box>

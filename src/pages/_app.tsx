@@ -3,18 +3,23 @@ import "@/styles/globals.css";
 import "@/styles/CustomSwiper.css";
 import "@/styles/custom-swiper.css";
 import theme from "@/styles/theme";
-import { Prompt } from "@next/font/google";
-import type { AppProps } from "next/app"; 
+import { Sarabun, Roboto } from "@next/font/google"; // Import the additional font
+import type { AppProps } from "next/app";
 
-const prompt = Prompt({
+const thaiFont = Sarabun({
   subsets: ["thai"],
-  weight: ["400", "500", "700"], 
+  weight: ["400", "500", "700"],
+});
+
+const englishFont = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <div className={prompt.className}>
+      <div className={`${thaiFont.className} ${englishFont.className}`}>
         <Component {...pageProps} />
       </div>
     </ChakraProvider>

@@ -12,16 +12,16 @@ const AboutPageCard = () => {
   return (
     <Grid
       templateColumns={["1fr", "1fr 1fr"]} // Stack in one column on mobile, two columns on larger screens
-      gap={8} // Add spacing between text and image
-      alignItems="center"
+      gap={4} // Reduced spacing between text and image
+      alignItems="start" // Align items to the start (top)
       justifyContent="center"
       px={["1rem", "4rem"]} // Padding adjustment for different screen sizes
-      py="4rem"
+      pl={["2rem", "6rem"]} // Added left padding to shift content to the right
     >
       {/* Text Section */}
       <GridItem>
         <Box textAlign={["center", "left"]}>
-          <Heading fontSize={["4xl", "5xl"]}>
+          <Heading fontSize={["3xl", "4xl"]}>
             ABOUT{" "}
             <span style={{ color: useColorModeValue("#FF9900", "#FF9900") }}>
               US
@@ -30,7 +30,7 @@ const AboutPageCard = () => {
 
           <Text
             mt="1rem"
-            fontSize="lg"
+            fontSize="md"
             fontWeight="bold"
             mb="1rem"
             color={useColorModeValue("gray.700", "gray.300")}
@@ -40,8 +40,9 @@ const AboutPageCard = () => {
 
           <Text
             mt="1rem"
-            fontSize="lg"
+            fontSize="md"
             color={useColorModeValue("gray.700", "gray.300")}
+            textAlign={["left", "left"]} // Ensure text is left-aligned on all screen sizes
           >
             บริษัท ไทยดอทรัน จำกัด เริ่มก่อตั้งเมื่อวันที่ 2 มีนาคม 2560
             เป็นบริษัทฯประกอบกิจการด้านบริการนักวิ่ง ด้วยระบบเทคโนโลยีครบวงจร
@@ -58,7 +59,7 @@ const AboutPageCard = () => {
           alt="About Us Image"
           objectFit="contain"
           width="100%"
-          boxSize={["150px", "250px", "300px"]} // Make the image more flexible for different screen sizes
+          boxSize={["60px", "120px", "160px"]} // Reduced image size for different screen sizes
         />
       </GridItem>
     </Grid>

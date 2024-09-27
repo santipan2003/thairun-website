@@ -1,16 +1,17 @@
-import { Box, Heading, Text, Flex } from "@chakra-ui/react";
+import { Box, Heading, Flex } from "@chakra-ui/react";
 
 const LandingPageCard = () => {
   return (
     <Box
       position="relative"
       width="100%"
-      height={{ base: "50vh", md: "100vh" }} // Adjust height for mobile screens
+      height={{ base: "25vh", md: "65vh" }} // Adjust height for mobile screens
       overflow="hidden"
-      backgroundImage="url('/UXUI Thai.run.svg')" // Add background image
+      backgroundImage="url('/pexels-runffwpu-2526878.jpg')" // Add background image
       backgroundSize="cover" // Ensure the image covers the full area
       backgroundPosition="center" // Center the background image
       backgroundRepeat="no-repeat" // Prevent background image from repeating
+      objectFit={"cover"} // Adjust image size for mobile screens
     >
       {/* Dark Overlay */}
       <Box
@@ -19,7 +20,7 @@ const LandingPageCard = () => {
         left="0"
         width="100%"
         height="100%"
-        backgroundColor="rgba(0, 0, 0, 0.4)" // Semi-transparent black overlay to darken the background
+        backgroundColor="rgba(0, 0, 0, 0.6)" // Semi-transparent black overlay to darken the background
         zIndex="0" // Ensure the overlay is behind the content
       />
 
@@ -34,24 +35,14 @@ const LandingPageCard = () => {
         px={[4, 8]} // Padding X for responsiveness
         textAlign="center" // Center text on smaller screens
       >
-        <Box mr={{ base: "0", md: "25rem" }}>
-          {" "}
-          {/* Adjust margin-right for mobile screens */}
+        <Box>
           {/* Hero Heading */}
           <Heading
-            fontSize={["4xl", "5xl", "6xl"]}
+            fontSize={["3xl", "4xl", "5xl"]} // Reduced font size by one size
             color="white"
             fontWeight="bold"
           >
-            www.thai.run <br />
-            <Text fontSize={["xl", "2xl", "3xl"]}>
-              เทคโนโลยีคนไทย เพื่องานวิ่งไทย <br />
-              สนับสนุนโดย
-              <Text as="span" color="#FF9900">
-                {" "}
-                สกสว.
-              </Text>{" "}
-            </Text>
+            ไทยรัน ฮับความสุขนักวิ่ง <br />
           </Heading>
         </Box>
       </Flex>
