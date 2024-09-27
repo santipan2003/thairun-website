@@ -32,7 +32,7 @@ const ContactPageCard = () => {
         py="2rem"
         mt="1rem"
        
-        bg={useColorModeValue("gray.50", "black")}
+        bg={useColorModeValue("white", "black")}
       >
         {/* Contact Info Section */}
         <GridItem maxWidth="100%">
