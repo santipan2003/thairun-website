@@ -99,7 +99,7 @@ body::-webkit-scrollbar {
     background-position: 50% 50%;
     background-size: cover;
     display: inline-block;
-    transition: all 2s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .slide .item:nth-child(1),
@@ -155,14 +155,14 @@ body::-webkit-scrollbar {
     text-transform: uppercase;
     font-weight: bold;
     opacity: 0;
-    animation: animate 1s ease-in-out 0.3s 1 forwards;
+    animation: animate 0.5s ease-in-out 0.3s 1 forwards;
 }
 
 .content .des{
     margin-top: 10px;
     margin-bottom: 20px;
     opacity: 0;
-    animation: animate 1s ease-in-out 0.5s 1 forwards;
+    animation: animate 0.5s ease-in-out 0.5s 1 forwards;
 }
 
 .content button{

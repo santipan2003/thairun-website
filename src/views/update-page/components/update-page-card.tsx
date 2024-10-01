@@ -91,7 +91,6 @@ const UpdatePageCard = () => {
                     objectFit="cover"
                     boxSize="600px"
                     mx="auto"
-                    borderRadius="lg"
                     cursor="pointer"
                     boxShadow="lg"
                     transition="transform 0.3s ease"
