@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link as ScrollLink } from "react-scroll";
+import Link from "next/link";
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -43,12 +44,15 @@ const Navbar = () => {
         justify="space-between"
         align="center"
       >
-        <Image
-          src={logoSrc}
-          alt="Logo Thairun"
-          boxSize={["50px", "75px", "50px"]}
-          objectFit="cover"
-        />
+        <Link href="/" passHref>
+          <Image
+            src={logoSrc}
+            alt="Logo Thairun"
+            boxSize={["50px", "75px", "50px"]}
+            objectFit="cover"
+            cursor="pointer" // Optional: Add cursor pointer to indicate it's clickable
+          />
+        </Link>
         <Flex
           alignItems="center"
           justify="flex-end"

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Marathon } from "@/interfaces";
 import axios from "axios";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const SlidePageCard: React.FC = () => {
   const [marathons, setMarathons] = useState<Marathon[]>([]);
@@ -67,10 +68,10 @@ const SlidePageCard: React.FC = () => {
 
       <div className="button">
         <button className="prev">
-          <i className="fa-solid fa-arrow-left"></i>
+          <FaArrowLeft />
         </button>
         <button className="next">
-          <i className="fa-solid fa-arrow-right"></i>
+          <FaArrowRight />
         </button>
       </div>
     </div>

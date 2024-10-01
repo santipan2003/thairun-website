@@ -99,7 +99,7 @@ body::-webkit-scrollbar {
     background-position: 50% 50%;
     background-size: cover;
     display: inline-block;
-    transition: all 1s ease-in-out;
+    transition: all 2s ease-in-out;
 }
 
 .slide .item:nth-child(1),
@@ -196,20 +196,37 @@ body::-webkit-scrollbar {
 
 
 
-.button button{
-    width: 40px;
-    height: 35px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    margin: 0 5px;
-    border: 1px solid #000;
-    transition: 0.3s;
+.button button {
+  width: 40px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  border: 1px solid #000;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px; /* Font size for the icons */
 }
 
 .button button:hover{
     background: #ababab;
-    color: #fff;
+}
+
+.button .prev {
+  position: absolute;
+  left: 41rem;
+  top: -10px;
+  transform: translateY(-50%);
+}
+
+.button .next {
+  position: absolute;
+  right: 40rem;
+  top: -10px;
+  transform: translateY(-50%);
 }
 
 /* ซ่อน .item รูปภาพเล็กๆ เมื่อเป็นจอขนาดเล็ก */
