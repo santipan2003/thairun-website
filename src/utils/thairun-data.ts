@@ -121,43 +121,41 @@ export const partnerData: Partner[] = [
   { id: 63, image: "IMG_9841.jpg", category: "Partners" },
 ];
 
-
-
 export const marathonData: Marathon[] = [
   {
     name: "www.thai.run",
     description:
       "Experience the vibrant streets of Thailand's capital as you run through historical landmarks and scenic routes.",
-    backgroundImage: "url(pexels-runffwpu-7631338.jpg)",
+    backgroundImage: "/pexels-runffwpu-7631338.jpg",
   },
   {
     name: "Chiang Mai Marathon",
     description:
       "Run through the mountainous terrain of Northern Thailand, passing beautiful temples and lush landscapes.",
-    backgroundImage: "url(pexels-runffwpu-2526878.jpg)",
+    backgroundImage: "/pexels-runffwpu-2526878.jpg",
   },
   {
     name: "Phuket Marathon",
     description:
       "Enjoy the tropical paradise of Phuket with a marathon that takes you along stunning beaches and coastal roads.",
-    backgroundImage: "url(athlete-prepared-run-athletics-track.jpg)",
+    backgroundImage: "/athlete-prepared-run-athletics-track.jpg",
   },
   {
     name: "Pattaya Marathon",
     description:
       "Join the Pattaya Marathon for a thrilling race along the city's famous beach and vibrant streets.",
-    backgroundImage: "url(side-view-fit-friends-outdoors.jpg)",
+    backgroundImage: "/side-view-fit-friends-outdoors.jpg",
   },
   {
     name: "Khon Kaen Marathon",
     description:
       "Explore the cultural heart of Thailand's Isan region with a marathon through Khon Kaen's urban and rural landscapes.",
-    backgroundImage: "url(pexels-runffwpu-14585153.jpg)",
+    backgroundImage: "/pexels-runffwpu-14585153.jpg",
   },
   {
     name: "Surat Thani Marathon",
     description:
       "Take on the challenge of the Surat Thani Marathon, running along riversides and lush greenery in Southern Thailand.",
-    backgroundImage: "url(pexels-runffwpu-7226772.jpg)",
+    backgroundImage: "/pexels-runffwpu-7226772.jpg",
   },
 ];

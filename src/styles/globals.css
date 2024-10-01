@@ -99,7 +99,7 @@ body::-webkit-scrollbar {
     background-position: 50% 50%;
     background-size: cover;
     display: inline-block;
-    transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .slide .item:nth-child(1),
@@ -150,41 +150,40 @@ body::-webkit-scrollbar {
     display: block;
 }
 
-.content .name{
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: bold;
-    opacity: 0;
-    animation: animate 0.5s ease-in-out 0.3s 1 forwards;
+.content .name {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  animation: animate 1s cubic-bezier(0.25, 0.1, 0.25, 1) 0.3s 1 forwards;
 }
 
-.content .des{
-    margin-top: 10px;
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: animate 0.5s ease-in-out 0.5s 1 forwards;
+.content .des {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: animate 1s cubic-bezier(0.25, 0.1, 0.25, 1) 0.3s 1 forwards;
 }
 
-.content button{
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    opacity: 0;
-    animation: animate 1s ease-in-out 0.5s 1 forwards;
+.content button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  /* animation: animate 1s cubic-bezier(0.25, 0.1, 0.25, 1) 0.7s 1 forwards; */
 }
 
 @keyframes animate {
-    from{
-        opacity: 0;
-        transform: translate(0, 100px);
-        filter: blur(33px);
-    }
-
-    to{
-        opacity: 1;
-        transform: translate(0);
-        filter: blur(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
 }
 
 .button{
