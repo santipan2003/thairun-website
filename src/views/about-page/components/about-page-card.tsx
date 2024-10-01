@@ -55,11 +55,11 @@ const AboutPageCard = () => {
       {/* Image Section */}
       <GridItem display="flex" justifyContent="center">
         <Image
-          src="https://www.thai.run/wp-content/uploads/2020/04/thairun_logo_and_line-300x283.png" // Replace with your image path
+          src="/marathonfreepik1.png" // Replace with your image path
           alt="About Us Image"
           objectFit="contain"
           width="100%"
-          boxSize={["60px", "120px", "160px"]} // Reduced image size for different screen sizes
+          boxSize={["60px", "120px", "200px"]} // Reduced image size for different screen sizes
         />
       </GridItem>
     </Grid>

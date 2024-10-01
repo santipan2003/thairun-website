@@ -5,7 +5,7 @@ const LandingPageCard = () => {
     <Box
       position="relative"
       width="100%"
-      height={{ base: "25vh", md: "65vh" }} // Adjust height for mobile screens
+      height={{ base: "40vh", md: "65vh" }} // Adjust height for mobile screens
       overflow="hidden"
       backgroundImage="url('/pexels-runffwpu-2526878.jpg')" // Add background image
       backgroundSize="cover" // Ensure the image covers the full area
